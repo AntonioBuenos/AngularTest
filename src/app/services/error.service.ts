@@ -1,11 +1,10 @@
-import {Injectable} from '@angular/core';
-import {Subject} from "rxjs";
+import {Injectable} from '@angular/core'
+import {Subject} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ErrorService {
-
   error$ = new Subject<string>()
 
   handle(message: string) {
@@ -16,5 +15,3 @@ export class ErrorService {
     this.error$.next('')
   }
 }
-
-
