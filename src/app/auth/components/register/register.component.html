@@ -1,0 +1,51 @@
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+        <h1 class="text-xs-center font-weight-bold">Registration Form</h1>
+        <p class="text-xs-center">
+          <a [routerLink]="['/login']">Log In</a>
+        </p>
+        BackendErrors are here
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <fieldset class="form-group">
+              <legend>
+                <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Your login"
+                formControlName="username"
+              />
+              </legend>
+            </fieldset>
+            <fieldset class="form-group">
+              <legend>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Your email"
+                  formControlName="email"
+                />
+              </legend>
+            </fieldset>
+            <fieldset class="form-group">
+              <legend>
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  placeholder="Your password"
+                  formControlName="password"
+                />
+              </legend>
+            </fieldset>
+            <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
+              Sign up
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
